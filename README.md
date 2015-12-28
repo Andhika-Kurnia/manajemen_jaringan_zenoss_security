@@ -4,8 +4,9 @@ Kelompok : Firdauz Fanani [15160] - Adhika Wisaksono [15261] - Andhika Kurnia [1
 ## INSTALASI ZENOSS
 
 Installasi Zenoss pada centOs
-1.Mulai dengan menginstall centOs . Lalu disable SELinux
-2.Hapus library mysql-libs package yang sudah terinstall pada centOs sebelumnya,Karena saat installasi zenoss akan muncul pesan version conflict 
+1. Item 1
+	1.Mulai dengan menginstall centOs . Lalu disable SELinux
+	2.Hapus library mysql-libs package yang sudah terinstall pada centOs sebelumnya,Karena saat installasi zenoss akan muncul pesan version conflict 
 
 *It appears that the distro-supplied version of MySQL is at least partially installed,or a prior installation attempt failed.*
 *Please remove these packages, as well as their dependencies (often postfix), and then retry this script:*
