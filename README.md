@@ -108,4 +108,55 @@ Untuk client yang lain, kita akan memperbolehkan zenoss untuk mendapatkan inform
 5. Jika sukses, ketik “exit” untuk kembali ke zenoss
 6. Jika gagal ketik “exit” untuk kembali ke root shell
 
+##Konfigurasi zenOss
+1. Hampir semua konfigurasi zenoss di lakukan dalam web. Buka browser dan buka :
 
+  ```
+  Your.Zenoss.IP.Address:8080
+  ```
+2. Jika kita pertama kali mengaksesnya maka akan muncul zenoss setup page :
+3. Lalu klik “Get Started!” untuk lanjut. Kita akan dibawa ke halaman “Set Up Initial Users”. 
+4. Pilih secure password untuk akun admin, dimana digunakan untuk tugas administrative, juga tambahkan regular username dan password untuk digunakan pada operasi biasa.
+5. Klik “Next” untuk lanjut, kita akan dibawa ke halaman “Specify or Discover Devices to Monitor” 
+6. Disini, kita akan menambahkan SNMP client VPS kita. Ketikkan IP addressnya ke kolom “Hostname/IP Address”. Pilih device type as Linux Server(SNMP) dan click “Save”. Click “Finish or Skip to Dashboard”
+7. Kita akan melihat dashboar dari zenoss. Click pada “Infrasturcture” . Kita akan dibawa ke halaman “Devices”
+
+##Menambahkan SSH Client
+1. Klik pada icon yang terlihat seperti monitor computer dengan “plus” ditengah. Pilih “Add a Single Device”
+2. Ketikkan pada IP Address pada SSH client kita dan pilih nama untuk mengidentifikasi yang ada pada “Title” field.
+3. Pilih “/Server/SSH/Linux” untuk Device Class dan uncheck Model Device CheckBox.
+4. Klik “Add” pada button.
+5. Refresh halaman , maka SSH client akan muncul. Klik nama mesinya untuk membuka Device Overview. Pada bagian kiri, klik pada “Configuration Properties”.
+6. Cari untik properti “zCommandUsername” dan double-click pada kolom “value”. Masukkan username yang digunakan pada SSH 
+7. Cari “zKeyPath” dan double klik pada kolom “value”.Masukkan full pathname pada kunci RSA kita. 
+
+  ```
+  /home/zenoss/.ssh/id_rsa
+  ```
+8. Pada dibawah window, klik pada gambar gear dan pilih “Model Device”
+9. Klik pada “X” di atas kanan setelah selesai.
+
+##Konfigurasi Localhost
+Konfigurasi untuk localhost tidak bekerja secara benar secara default.  Ini artinya VPS zenoss kita tidak di buat model secara benar.
+
+1. Untuk membenarkan polling SNMP, log in ke mesin sebagai root, pindah pada directory konfigurasi SNMP dan pindah konfigurasi default SNMP daemon ke tempat yang aman.
+
+  ```
+  cd /etc/snmp/
+  mv snmpd.conf snmpd.conf.bak
+  ```
+2. Sekarang buat snmpd.conf.file sederhana, seperti saat SNMP client sebelumnya
+  
+  ```
+  nano snmpd.conf
+  rocommunity public
+  ```
+3. Restart sevice :
+
+  ```
+  service snmpd restart
+  ```
+4. Kembali ke interface web, klik pada “Infrastructure” dan pilih “Devices”. Klik pada “Localhost” link untuk membuka konfigurasinya.
+5. Sekarang klik pada gambar gear. Pilih “Reset/Change IP Address”
+6. Pada dialog yang akan muncul, ketikkan “127.0.0.1” untuk menggunakan loopback network device
+7. Klik kembali pada gambar gear dan pilih “Model Device”untuk membetulkan masalah sebelumya. Klik “X” ketika log sudah selesai.
