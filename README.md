@@ -44,3 +44,5 @@
   ```
 10.	Pilih password dan confirm .
 11.	Installasi memerlukan waktu yang lumayan lama.
+
+##Konfigurasi Pada Client
