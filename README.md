@@ -36,7 +36,7 @@
 6. Tekan “ENTER” untuk melanjutkan.Lalu akan muncul pesan License Agreement, baca lalu tekan “Q” untuk melanjutkan.
 7. Lalu akan muncul pesan accept license, ketikkan “yes” untuk melanjutkan.
 8. Zenoss akan mulai mendownload dan menkonfigurasi komponen-komponen yang dibutuhkan.
-9. Pada beberapa bagian saat installasi, akan ditanya apakah kita ingin mengatur password root pada mysql, ketikkan “Y” untuk memilih password
+9. Pada beberapa bagian saat installasi, akan ditanya apakah kita ingin mengatur password root pada mysql,ketikkan “Y” untuk memilih password
   ```
   MySQL is configured with a blank root password.
   Configure a secure MySQL root password? [Yn]: Y
