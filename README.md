@@ -56,25 +56,30 @@
 Pada installasi Ubuntu, kita akan menginstall SNMP daemon, dimana akan memperbolehkan Zenoss mendapatkan informasi tentang client.
 
 1. Pada client, ketikkan command :
+
   ```
   sudo apt-get update
   sudo apt-get install snmpd
   ```
 2. Setelah installasi , kita membutuhkan konfigurasi untuk daemon, pertama kita menuju konfigurasi directory dan lalu mengganti konfigurasi defaultnya :
+
   ```
   cd /etc/snmp/
   sudo mv snmpd.conf snmpd.conf.bak
   ```
 3. Sekarang, kita akan membuat baru, konfigurasi file sebagai root 
+
   ```
   sudo nano snmpd.conf
   ```
 4. Copy dan paste line ini pada file konfigurasi 
+
   ```
   rocommunity public
   ```
 5. Simpan dan tutup file tersebut.
-6. Sekarang kita punya kofigurasi SNMP daemon, kita membutuhkan restart service untuk mengimplementasikan perubahannya.:
+6. Sekarang kita punya kofigurasi SNMP daemon, kita membutuhkan restart service untuk mengimplementasikan perubahannya:
+
   ```
   sudo service snmpd restart
   ```
@@ -84,16 +89,19 @@ Pada installasi Ubuntu, kita akan menginstall SNMP daemon, dimana akan memperbol
 Untuk client yang lain, kita akan memperbolehkan zenoss untuk mendapatkan informasi melalui SSH. Kita akan menkonfigurasi pada zenoss , bukan pada SSH client.
 
 1. Mulai dengan log in pada zenoss user dan membuat kunci RSA :
+
   ```
   su - zenoss
   ssh-keygen -t rsa
   ```
 2. Lalu tekan “ENTER” untuk menerima secara default dan menggunakan no passphrase.
 3. Lalu, kita copy kunci SSH ke Komputer client SSH kita. Ubah username dan IP address untuk merefleksinakan konfigurasi SSH kita :
+
   ```
   ssh-copy-id username@SSH.Client.IP.Address
   ```
 4. Kita akan ditanya tentang authentikasi pada remote machine melalui password dan lalu kita akan menambahkan kunci kita pada remote server. Tes kemampuan untuk log in tanpa password dengan mengetikkan :
+
   ```
   ssh username@SSH.Client.IP.Address
   ```
