@@ -1,4 +1,4 @@
-## INSTALASI Security Plugin on zenOss
+## INSTALASI Security Plugin pada zenOss
 
 
 1. Zenpack tidak mempunyai installasi yang spesial. Berdasarkan versi dari zenOss yang kita install maka kita menginstall zenPacknya. Kita akan membutuhkan (.egg) untuk memverifikasi package yang kita punya untuk menginstall zenPack.
