@@ -14,6 +14,7 @@
 ```
 mysql-libs-5.1.69-1.el6_4.x86_64
 ```
+...
 3. Maka kita akan menghapus file-file tersebut sebelum dimulai
 ```
 yum remove mysql-libs
