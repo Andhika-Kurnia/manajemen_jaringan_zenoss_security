@@ -8,9 +8,8 @@
 ## INSTALASI ZENOSS
 
 1. Mulai dengan menginstall centOs. Lalu disable SELinux
-2. Hapus library mysql-libs package yang sudah terinstall pada centOs sebelumnya,Karena saat installasi zenoss akan muncul pesan version conflict
-  *It appears that the distro-supplied version of MySQL is at least partially installed,or a prior installation attempt failed.*
-  *Please remove these packages, as well as their dependencies (often postfix), and then retry this script:*
+
+2. Hapus library mysql-libs package yang sudah terinstall pada centOs sebelumnya,Karena saat installasi zenoss akan muncul pesan version conflict "*It appears that the distro-supplied version of MySQL is at least partially installed,or a prior installation attempt failed. Please remove these packages, as well as their dependencies (often postfix), and then retry this script:*"
   ```
   mysql-libs-5.1.69-1.el6_4.x86_64
   ```
@@ -34,15 +33,23 @@
   ```
 
 6. Tekan “ENTER” untuk melanjutkan.Lalu akan muncul pesan License Agreement, baca lalu tekan “Q” untuk melanjutkan.
-7. Lalu akan muncul pesan accept license, ketikkan “yes” untuk melanjutkan.
-8. Zenoss akan mulai mendownload dan menkonfigurasi komponen-komponen yang dibutuhkan.
-9. Pada beberapa bagian saat installasi, akan ditanya apakah kita ingin mengatur password root pada mysql,ketikkan “Y” untuk memilih password
 
+7. Lalu akan muncul pesan accept license, ketikkan “yes” untuk melanjutkan.
+
+8. Zenoss akan mulai mendownload dan menkonfigurasi komponen-komponen yang dibutuhkan.
+
+9. Pada beberapa bagian saat installasi, akan ditanya apakah kita ingin mengatur password root pada mysql,ketikkan “Y” untuk memilih password
   ```
   MySQL is configured with a blank root password.
   Configure a secure MySQL root password? [Yn]: Y
   ```
+
 10.	Pilih password dan confirm .
+<<<<<<< HEAD
 11.	Installasi memerlukan waktu yang lumayan lama.
 
 ##Konfigurasi Pada Client
+=======
+
+11.	Installasi memerlukan waktu yang lumayan lama.
+>>>>>>> ab9561231234bb9a87eb5893cef21daf7d5dfb94
