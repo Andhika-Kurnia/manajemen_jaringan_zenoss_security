@@ -45,7 +45,6 @@
   ```
 
 10.	Pilih password dan confirm .
-<<<<<<< HEAD
 11.	Installasi memerlukan waktu yang lumayan lama.
 
 ##Konfigurasi Pada Client
@@ -55,6 +54,7 @@
 
 ##Konfigurasi SNMP Client
 Pada installasi Ubuntu, kita akan menginstall SNMP daemon, dimana akan memperbolehkan Zenoss mendapatkan informasi tentang client.
+
 1. Pada client, ketikkan command :
   ```
   sudo apt-get update
@@ -81,8 +81,8 @@ Pada installasi Ubuntu, kita akan menginstall SNMP daemon, dimana akan memperbol
 7. Client sekarang akan merespon ke polling request.
 
 ##Konfigurasi SSH Client
-Untuk client yang lain, kita akan memperbolehkan zenoss untuk mendapatkan informasi melalui SSH.
-Kita akan menkonfigurasi pada zenoss , bukan pada SSH client
+Untuk client yang lain, kita akan memperbolehkan zenoss untuk mendapatkan informasi melalui SSH. Kita akan menkonfigurasi pada zenoss , bukan pada SSH client.
+
 1. Mulai dengan log in pada zenoss user dan membuat kunci RSA :
   ```
   su - zenoss
