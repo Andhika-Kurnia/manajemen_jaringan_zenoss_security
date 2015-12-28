@@ -1,5 +1,9 @@
-# manajemen_jaringan_zenoss_security
-Kelompok : Firdauz Fanani [15160] - Adhika Wisaksono [15261] - Andhika Kurnia [15465] - Carolus Gaza [15250] - Goldi Rillo [15315]
+# ANGGOTA KELOMPOK
+- Firdauz Fanani [15160]
+- Carolus Gaza [15250]
+- Adhika Wisaksono [15261]
+- Goldi Rillo [15315]
+- Andhika Kurnia [15465]
 
 ## INSTALASI ZENOSS
 
@@ -9,4 +13,4 @@ Kelompok : Firdauz Fanani [15160] - Adhika Wisaksono [15261] - Andhika Kurnia [1
 *It appears that the distro-supplied version of MySQL is at least partially installed,or a prior installation attempt failed.*
 *Please remove these packages, as well as their dependencies (often postfix), and then retry this script:*
 
-` mysql-libs-5.1.69-1.el6_4.x86_64
+`mysql-libs-5.1.69-1.el6_4.x86_64`
