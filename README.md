@@ -39,4 +39,3 @@ Configure a secure MySQL root password? [Yn]: Y
 ```
 10.	Pilih password dan confirm .
 11.	Installasi memerlukan waktu yang lumayan lama.
-```
